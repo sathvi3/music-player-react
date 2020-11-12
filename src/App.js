@@ -1,9 +1,12 @@
 import React from 'react';
+import Player from './components/Player';
+import Song from './components/Song';
 
 function App() {
   return (
     <div className="app">
-      <h1>Hello World!</h1>
+      <Song />
+      <Player />
     </div>
   );
 }
