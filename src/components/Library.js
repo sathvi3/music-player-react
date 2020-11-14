@@ -1,10 +1,20 @@
 import React from "react";
+import cx from "classnames";
 import LibrarySong from "./LibrarySong";
 import styles from "../styles/library.module.scss";
 
-const Library = ({ songs, setCurrentSong, audioRef, isPlaying, setSongs }) => {
+const Library = ({
+  songs,
+  setCurrentSong,
+  audioRef,
+  isPlaying,
+  setSongs,
+  libraryStatus,
+}) => {
   return (
-    <div className={styles.library}>
+    <div
+      className={cx(styles.library, { [styles.active_library]: libraryStatus })}
+    >
       <h2>Library</h2>
       <div className={styles.library_songs}>
         {songs.map((song) => (
