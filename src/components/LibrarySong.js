@@ -1,5 +1,4 @@
 import React from "react";
-import { playAudio } from "../util";
 import cx from "classnames";
 import styles from "../styles/librarysong.module.scss";
 
@@ -30,7 +29,7 @@ const LibrarySong = ({
     });
     setSongs(newSongs);
     //Check if Song is Playing
-    playAudio(isPlaying, audioRef);
+    if (isPlaying) audioRef.current.play();
   };
   return (
     <div
