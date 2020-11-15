@@ -5,7 +5,7 @@ import styles from "../styles/nav.module.scss";
 
 const Nav = ({ libraryStatus, setLibraryStatus }) => {
   return (
-    <nav>
+    <nav className={styles.nav}>
       <h1>Chords</h1>
       <button onClick={() => setLibraryStatus(!libraryStatus)}>
         Library
